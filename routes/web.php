@@ -28,4 +28,12 @@ Route::get('/users', function() {
     return ['PHP', 'HTML', 'Laravel'];
 });
 
+//Route to users - JSON
+Route::get('/users', function() {
+    return response()->json([
+        'name' => 'Jesse',
+        'course' => 'Laravel'
+    ]);
+});
+
 
