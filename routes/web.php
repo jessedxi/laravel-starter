@@ -36,4 +36,9 @@ Route::get('/users', function() {
     ]);
 });
 
+//Route to users - Function
+Route::get('users', function () {
+   return redirect('/');
+});
+
 
