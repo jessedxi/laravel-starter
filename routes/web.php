@@ -22,3 +22,10 @@ Route::get('/', function () {
 Route::get('/users', function () {
     return 'Welcome to the Users page';
 });
+
+//Route to users - array
+Route::get('/users', function() {
+    return ['PHP', 'HTML', 'Laravel'];
+});
+
+
