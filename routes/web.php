@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+//Route::get('/products', [ProductsController::class, 'index'] );
+
+//Laravel 8
+Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
 
 
