@@ -20,8 +20,7 @@ Route::get('/', function () {
 
 Route::get('/products', [ProductsController::class, 'index'] );
 Route::get('/products/about', [ProductsController::class, 'about']);
-//Laravel 8
-Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+
 
 
 
