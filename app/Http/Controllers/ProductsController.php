@@ -15,10 +15,7 @@ class ProductsController extends Controller
             'productOne' => 'iPhone',
             'productTwo' => 'Samsung'
         ];
-//        return view('products.index',
-//            compact('title', 'description'));
-        //return view('products.index')->with('title', $title);
-        //return view('products.index')->with('data', $data);
+
         return view('products.index', [
             'data' => $data
         ]);
@@ -27,5 +24,16 @@ class ProductsController extends Controller
     public function about()
     {
         return 'about us page';
+    }
+
+    public function show($name)
+    {
+        $data = [
+            'iphone' => 'iPhone',
+            'samsung' => 'Samsung'
+        ];
+        return view('products.index', [
+            'products' => $data[$name]
+        ]);
     }
 }
