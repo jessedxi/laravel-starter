@@ -18,7 +18,10 @@ class ProductsController extends Controller
 //        return view('products.index',
 //            compact('title', 'description'));
         //return view('products.index')->with('title', $title);
-        return view('products.index')->with('data', $data);
+        //return view('products.index')->with('data', $data);
+        return view('products.index', [
+            'data' => $data
+        ]);
     }
 
     public function about()
